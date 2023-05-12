@@ -1,0 +1,23 @@
+.searchHistory {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    padding: 26px;
+    margin-top: 26px;
+}
+
+.fontOne {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+
+@media screen and (max-width:769px) {
+    .searchHistory {
+        padding: 20px;
+    }
+
+    .fontOne {
+        font-size: 14px;
+        line-height: 19px;
+    }
+}

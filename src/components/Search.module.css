@@ -1,0 +1,48 @@
+.search {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.input {
+    background: rgba(255, 255, 255, 0.2);
+    border: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 15px;
+    width: 100%;
+}
+
+.input:focus {
+    outline: none;
+    border: 1px solid gray;
+}
+
+.btn {
+    border-radius: 15px;
+    background-color: #6C40B5;
+    border: #6C40B5;
+    padding: 12px;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #6634b6;
+    border: #6634b6;
+}
+
+@media screen and (max-width:769px) {
+    .search {
+        column-gap: 10px;
+    }
+
+    .input {
+        border-radius: 8px;
+    }
+
+    .btn {
+        border-radius: 8px;
+    }
+}

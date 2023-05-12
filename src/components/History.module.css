@@ -7,6 +7,10 @@
     margin-top: 20px;
 }
 
+.historyDark {
+    background: rgba(26, 26, 26, 0.5);
+}
+
 .info {
     display: flex;
     justify-content: space-between;
@@ -16,6 +20,10 @@
     font-size: 16px;
     line-height: 22px;
     color: #000000;
+}
+
+.infoDark {
+    color: white;
 }
 
 .btns {
@@ -28,20 +36,38 @@
     border-radius: 50%;
     padding: 7px;
     display: flex;
-    border: 1px solid transparent;
-    color: gray;
     cursor: pointer;
     background: #FFFFFF;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.btn:hover {
+.btnLight {
+    border: 2px solid transparent;
+    color: gray;
+}
+
+.btnLight:hover {
     background: rgb(245 245 245);
-    border: 1px solid;
+    border: 2px solid;
+}
+
+.btnDark {
+    color: rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+}
+
+.btnDark:hover {
+    color: white;
+    border: 2px solid white;
 }
 
 .datetime {
     font-size: 10px;
+}
+
+.datetimeDark {
+    color: rgba(255, 255, 255, 0.5);
 }
 
 @media screen and (max-width:769px) {

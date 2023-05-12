@@ -15,6 +15,7 @@ const options = {
 
 const History = () => {
     const isMobile = useMediaQuery("(max-width:769px)");
+    const mode = useSelector(state => state.search.mode);
     const searchhistory = useSelector(state => state.search.searchHistory);
     const dispatch = useDispatch();
 
@@ -40,16 +41,16 @@ const History = () => {
     return (
         <>
             {searchhistory.length > 0 && searchhistory.map(search => {
-                return <div className={classes.history} key={search.id}>
-                    <div className={classes.info}>
+                return <div className={`${classes.history} ${mode === 'dark' ? classes.historyDark : ''}`} key={search.id}>
+                    <div className={`${classes.info} ${mode === 'dark' ? classes.infoDark : ''}`}>
                         <p>{search.country}</p>
-                        <p className={`${isMobile ? classes.datetime : ''}`}>{search.createdAt}</p>
+                        <p className={`${isMobile ? classes.datetime : ''} ${mode === 'dark' ? classes.datetimeDark : ''}`}>{search.createdAt}</p>
                     </div>
                     <div className={classes.btns}>
-                        <button className={classes.btn} onClick={() => searchCountry(search.country)}>
+                        <button className={`${classes.btn} ${mode === 'dark' ? classes.btnDark : classes.btnLight}`} onClick={() => searchCountry(search.country)}>
                             <SearchOutlined />
                         </button>
-                        <button className={classes.btn} onClick={() => { dispatch(searchActions.deleteSearch(search.id)) }}>
+                        <button className={`${classes.btn} ${mode === 'dark' ? classes.btnDark : classes.btnLight}`} onClick={() => { dispatch(searchActions.deleteSearch(search.id)) }}>
                             <DeleteOutline />
                         </button>
                     </div>

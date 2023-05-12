@@ -5,8 +5,6 @@
 }
 
 .input {
-    background: rgba(255, 255, 255, 0.2);
-    border: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
     padding: 15px;
     width: 100%;
@@ -17,10 +15,19 @@
     border: 1px solid gray;
 }
 
+.lightinput {
+    background: rgba(255, 255, 255, 0.2);
+    border: rgba(255, 255, 255, 0.2);
+}
+
+.darkInput {
+    background: rgba(26, 26, 26, 0.5);
+    border: rgba(26, 26, 26, 0.5);
+    color: white;
+}
+
 .btn {
     border-radius: 15px;
-    background-color: #6C40B5;
-    border: #6C40B5;
     padding: 12px;
     color: white;
     display: flex;
@@ -28,10 +35,27 @@
     cursor: pointer;
 }
 
-.btn:hover {
+.lightBtn {
+    background-color: #6C40B5;
+    border: #6C40B5;
+}
+
+.lightBtn:hover {
     background-color: #6634b6;
     border: #6634b6;
 }
+
+.darkBtn {
+    background-color: #28124D;
+    border: #28124D;
+}
+
+.darkBtn:hover {
+    background-color: #300f66;
+    border: #300f66;
+}
+
+
 
 @media screen and (max-width:769px) {
     .search {

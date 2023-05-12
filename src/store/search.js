@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
+    mode: "light",
     currentSearch: null,
     searchHistory: []
 }
@@ -9,6 +10,9 @@ const searchSlice = createSlice({
     name: 'search',
     initialState: initialState,
     reducers: {
+        setMode: (state) => {
+            state.mode = state.mode === "light" ? "dark" : "light";
+        },
         setSearch: (state, action) => {
             state.currentSearch = action.payload.search;
         },
